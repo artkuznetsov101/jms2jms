@@ -14,7 +14,6 @@ public class Config {
 		static String PASSWORD;
 		static String CLIENTID;
 		static String SUBSCRIPTION_NAME;
-		static int TIMEOUT;
 	}
 
 	public static class TO {
@@ -25,7 +24,6 @@ public class Config {
 		static String PASSWORD;
 		static String CLIENTID;
 		static String SUBSCRIPTION_NAME;
-		static int TIMEOUT;
 	}
 
 	public static class COMMON {
