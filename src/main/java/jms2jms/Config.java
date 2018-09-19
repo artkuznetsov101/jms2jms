@@ -32,33 +32,6 @@ public class Config {
 		static int TIMEOUT;
 	}
 
-	public static class FTP {
-		static String HOST;
-		static String PORT;
-
-		static String USERNAME;
-		static String PASSWORD;
-
-		static String FTP_DIR;
-		static String TEMP_DIR;
-	}
-
-	public static class JMS {
-		static String HOST;
-		static String PORT;
-
-		static String USERNAME;
-		static String PASSWORD;
-
-		static String QUEUE_MANAGER;
-		static String CHANNEL;
-		static String RECV_QUEUES_NAME;
-		static String SEND_QUEUE_NAME;
-
-		static String FTP_DIR;
-		static String TEMP_DIR;
-	}
-
 	public static void setConfig(Wini ini) {
 		if ((Config.COMMON.TIMEOUT = ini.get("COMMON", "TIMEOUT", Integer.TYPE).intValue()) == 0)
 			throw new IllegalArgumentException("COMMON->TIMEOUT parameter not specified in ini file. Exit");
