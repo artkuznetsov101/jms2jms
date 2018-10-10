@@ -1,10 +1,13 @@
 package jms2jms;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 
 import org.ini4j.Wini;
 
 public class Main {
+
+	private static SimpleDateFormat formatterWithTimezone = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:Z");
 
 	public static void main(String[] args) throws Exception {
 
@@ -17,4 +20,9 @@ public class Main {
 		jmsThread.start();
 		jmsThread.join();
 	}
+
+	public static String getTimestampWithTimezone() {
+		return formatterWithTimezone.format(System.currentTimeMillis());
+	}
+
 }
