@@ -98,8 +98,6 @@ public class JMSProducer extends Thread implements ExceptionListener {
 					if ((message = queue.take()) != null) {
 						log.debug("producer -> exchange get " + message.getJMSMessageID());
 						message.setJMSCorrelationID(message.getJMSMessageID());
-						message.clearProperties();
-						message.setStringProperty("jms2jms_sent", String.valueOf(System.currentTimeMillis()));
 						producer.send(message);
 						log.debug("producer -> [" + destTo + "] put: " + message.getJMSCorrelationID());
 						session.commit();
